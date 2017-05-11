@@ -1,0 +1,21 @@
+.list-item{
+  border: 2rpx solid #eee;
+  margin-top: 5rpx;
+  width: 80%;
+  padding: 10rpx;
+}
+.list-item-text{
+  width:60%;
+  float:left;
+  line-height: 30rpx;
+}
+.list-item-but{
+  width:30%;
+  margin-left:10%;
+  float:left;
+}
+.list-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

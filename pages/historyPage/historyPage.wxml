@@ -1,0 +1,7 @@
+<!--historyPage.wxml-->
+<view class="container list-container">
+  <view class="list-item"  wx:for="{{historyData}}" wx:for-item="historyItem" wx:key="*this">
+    <text class="list-item-text">{{index + 1}}. {{historyItem.countDate}}  {{historyItem.totalCount}}次 </text>
+    <button data-id="{{historyItem.id}}"  data-index="{{index}}" bindtap="deleteById"  hover-class="other-button-hover" class="list-item-but" type="warn">删除</button>
+  </view>
+</view>

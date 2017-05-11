@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="getHistory" class="userinfo">
+    <view>
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+    <text class="userinfo-history-info">点击查看历史记录</text>
+  </view>
+  <view style="width: 100%;padding: 10rpx;">
+    <view style="padding: 20rpx;">
+      <view><text>当前时间：{{currentTime}}</text></view>
+      <button style="width: 30%;float:left;" type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="resetCount" hover-class="other-button-hover"> 重置 </button>
+      <button style="margin-left:5%;width: 65%;float:left;" type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="count" hover-class="other-button-hover" > 第{{objectArray.length}}次 </button>
+    </view>
+    <view style="margin-top: 70rpx; padding: 20rpx; "><text>开始时间：{{startString}}</text></view>
+    <view style="padding: 20rpx; ">
+    <text wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} {{item.content}} {{item.datatime}} </text>
+      <button style="margin-top:20rpx;width: 80%;" type="primary" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="saveData" hover-class="other-button-hover" > 保存 </button>
+    </view>
+  </view>
+</view>
